@@ -7,3 +7,4 @@
     - [Setup upgrade Schema and Data](/magento2/setup-upgrade-schema-data)
     - [Create a new product attribute](/magento2/create-new-product-attribute)
     - [Create Entity - database table](/magento2/create-entity-table)
+    - [Create Entity - model and collection](/magento2/create-entity-model-collection)
