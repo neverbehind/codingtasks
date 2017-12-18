@@ -8,3 +8,4 @@
     - [Create a new product attribute](/magento2/create-new-product-attribute)
     - [Create Entity - database table](/magento2/create-entity-table)
     - [Create Entity - model and collection](/magento2/create-entity-model-collection)
+    - [Create Entity - API Data structure](/magento2/create-entity-api-data-structure)
