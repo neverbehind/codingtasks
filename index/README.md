@@ -9,3 +9,4 @@
     - [Create Entity - database table](/magento2/create-entity-table)
     - [Create Entity - model and collection](/magento2/create-entity-model-collection)
     - [Create Entity - API Data structure](/magento2/create-entity-api-data-structure)
+    - [Create Entity - Repository](/magento2/create-entity-repository)
