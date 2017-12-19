@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package     CodingTask_ModuleName
+ * @copyright   Copyright ⓒ 2017
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="CodingTask\ModuleName\Api\Data\CustomEntityInterface"
+                type="CodingTask\ModuleName\Model\CustomEntity"/>
+    <preference for="CodingTask\ModuleName\Api\CustomEntityRepositoryInterface"
+                type="CodingTask\ModuleName\Model\CustomEntityRepository"/>
+    <preference for="CodingTask\ModuleName\Api\Data\CustomEntitySearchResultsInterface"
+                type="Magento\Framework\Api\SearchResults"/>
+</config>
