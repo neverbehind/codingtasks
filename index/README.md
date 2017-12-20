@@ -11,4 +11,5 @@
     - [Create Entity - API Data structure](/magento2/create-entity-api-data-structure)
     - [Create Entity - Repository](/magento2/create-entity-repository)
     - [Create Entity - REST API](/magento2/create-entity-rest-api)
+    - [Create Entity - Display on product page](/magento2/create-entity-display-product-page)
     - [Custom logger](/magento2/custom-logger)
