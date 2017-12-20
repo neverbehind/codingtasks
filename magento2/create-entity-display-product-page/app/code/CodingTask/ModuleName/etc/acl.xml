@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package     CodingTask_ModuleName
+ * @copyright   Copyright ⓒ 2017
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="CodingTask_ModuleName::admin" title="Custom Entity Management" translate="title" sortOrder="100">
+                    <resource id="CodingTask_ModuleName::api" title="API" translate="title" sortOrder="100"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
