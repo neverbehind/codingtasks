@@ -12,4 +12,5 @@
     - [Create Entity - Repository](/magento2/create-entity-repository)
     - [Create Entity - REST API](/magento2/create-entity-rest-api)
     - [Create Entity - Display on product page](/magento2/create-entity-display-product-page)
+    - [Create Entity - Custom JS](/magento2/create-entity-custom-js)
     - [Custom logger](/magento2/custom-logger)

@@ -1,0 +1,19 @@
+<?php
+/**
+ * @package     CodingTask_ModuleName
+ * @copyright   Copyright ⓒ 2017
+ */
+?>
+<?php /** @var \CodingTask\ModuleName\Block\DisplayEntity $block */ ?>
+<div class="box">
+    <h3><?php echo $block->getCustomEntity()->getName() ?></h3>
+    <p>
+        <?php echo $block->getCustomEntity()->getDescription() ?>
+    </p>
+    <div class="action">
+        <button name="submit" class="action" type="button"
+                data-mage-init='{"customLibrary":{"foo":<?php echo json_encode($block->getCustomEntity()->getData()) ?>}}'>
+            <span><?php echo __('Show') ?></span>
+        </button>
+    </div>
+</div>
