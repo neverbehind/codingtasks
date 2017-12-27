@@ -12,10 +12,11 @@ Coding Tasks is a community driven collection of standard coding tasks for vario
 - Article Published on Coding Tasks
 
 ## Instructions
-1. Clone Coding Tasks Repo
+1. Fork [Coding Tasks Repo](https://github.com/neverbehind/codingtasks)
 1. Create a folder in the appropriate platform directory, for the task you are documenting.
 1. Compose article following the `Article Template` below.
 1. Save the article as the README.md in the folder you created for the task.
+1. Add an entry into the `index/README.md` linking to your new task folder.
 1. Commit and Push the changes up to the repo. 
  
 
@@ -24,11 +25,14 @@ Coding Tasks is a community driven collection of standard coding tasks for vario
     # [Task Name]
     
     [Task Description]
-     
+         
     ## Task Details  
     Platform/Framework: [Magento 2, Java Spring, etc]
     Development Hours: [number of hours]
     Task Type: [Base, Modifier]
+
+    ## Pre requirements
+    [List of Tasks that you will need to have performed to accomplish this task]
      
     ## Task Objectives
     [List of Deliverables]

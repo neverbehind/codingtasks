@@ -14,3 +14,4 @@
     - [Create Entity - Display on product page](/magento2/create-entity-display-product-page)
     - [Create Entity - Custom JS](/magento2/create-entity-custom-js)
     - [Custom logger](/magento2/custom-logger)
+    - [Debug - Enable database logs](/magento2/debug-enable-database-logs)
