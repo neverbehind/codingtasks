@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package     CodingTask_ModuleName
+ * @copyright   Copyright ⓒ 2017
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <route method="POST" url="/V1/customentity">
+        <service class="CodingTask\ModuleName\Api\CustomEntityRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="CodingTask_ModuleName::api"/>
+        </resources>
+    </route>
+    
+    <route method="PUT" url="/V1/customentity/:id">
+        <service class="CodingTask\ModuleName\Api\CustomEntityRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="CodingTask_ModuleName::api"/>
+        </resources>
+    </route>
+    
+    <route method="DELETE" url="/V1/customentity/:id">
+        <service class="CodingTask\ModuleName\Api\CustomEntityRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="CodingTask_ModuleName::api"/>
+        </resources>
+    </route>
+    
+    <route method="GET" url="/V1/customentity">
+        <service class="CodingTask\ModuleName\Api\CustomEntityRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="CodingTask_ModuleName::api"/>
+        </resources>
+    </route>
+</routes>
