@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="codingtask_user_input" class="CodingTask\ModuleName\Block\Widget\UserInput">
+        <label translate="true">User Input Block</label>
+        <description translate="true">Widget that Displays User Input</description>
+        <parameters>
+            <parameter name="template" xsi:type="select" visible="true" required="true" sort_order="10">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="widget/template.phtml" selected="true">
+                        <label translate="true">Coding Tasks Module Widget Default Template</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="user_input" xsi:type="text" visible="true" required="true" sort_order="10">
+                <label translate="true">User Input</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
