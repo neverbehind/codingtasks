@@ -4,9 +4,9 @@ Magento 2 Extension Shell or Skeleton
  
 ## Task Details  
 
-Platform/Framework: Magento 2
-Development Hours: 30 mins
-Task Type: Base
+**Platform/Framework:** Magento 2
+**Development Hours:** 30 mins
+**Task Type:** Base
  
 ## Task Objectives
 
