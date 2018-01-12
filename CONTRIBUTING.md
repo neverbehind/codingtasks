@@ -25,12 +25,12 @@ Coding Tasks is a community driven collection of standard coding tasks for vario
     # [Task Name]
     
     [Task Description]
-         
+          
     ## Task Details  
-    Platform/Framework: [Magento 2, Java Spring, etc]
-    Development Hours: [number of hours]
-    Task Type: [Base, Modifier]
-
+    **Platform/Framework:** [Platform]  
+    **Development Hours:** 30 mins  
+    **Task Type:** Base  
+        
     ## Pre requirements
     [List of Tasks that you will need to have performed to accomplish this task]
      
