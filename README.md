@@ -12,4 +12,4 @@ development requests.
 
 ## Contributing
 
-See [CONTIBUTING](/CONTRIBUTING.md) for instructions on how to help.
+See [CONTRIBUTING](/CONTRIBUTING.md) for instructions on how to help.
