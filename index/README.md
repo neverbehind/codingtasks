@@ -17,3 +17,5 @@
     - [Create Widget Type](/magento2/create-widget-type)
     - [Custom logger](/magento2/custom-logger)
     - [Debug - Enable database logs](/magento2/debug-enable-database-logs)
+- [MySQL](/mysql)
+    - [Create User](/mysql/create-mysql-user)
