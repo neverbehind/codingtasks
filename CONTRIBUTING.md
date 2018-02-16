@@ -13,6 +13,7 @@ Coding Tasks is a community driven collection of standard coding tasks for vario
 
 ## Instructions
 1. Fork [Coding Tasks Repo](https://github.com/neverbehind/codingtasks)
+1. Search the existing pull requests, to see if anyone else is working on that task.
 1. Create a folder in the appropriate platform directory, for the task you are documenting, with a placeholder README.md file.
 1. Create a Pull Request to `neverbehind/codingtasks` to communicate that you are working on that task.
 1. Compose article following the `Article Template` below.
