@@ -13,11 +13,15 @@ Coding Tasks is a community driven collection of standard coding tasks for vario
 
 ## Instructions
 1. Fork [Coding Tasks Repo](https://github.com/neverbehind/codingtasks)
-1. Create a folder in the appropriate platform directory, for the task you are documenting.
+1. Create a folder in the appropriate platform directory, for the task you are documenting, with a placeholder README.md file.
+1. Create a Pull Request to `neverbehind/codingtasks` to communicate that you are working on that task.
 1. Compose article following the `Article Template` below.
-1. Save the article as the README.md in the folder you created for the task.
+1. Save the article in the README.md in the folder you created for the task.
+1. Add sample code in your task folder.
 1. Add an entry into the `index/README.md` linking to your new task folder.
-1. Commit and Push the changes up to the repo. 
+1. Commit and Push the changes up to the repo.
+1. Update the Pull Request with a comment that it is ready to merge in.
+
  
 
 ## Article Template
