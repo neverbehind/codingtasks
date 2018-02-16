@@ -290,3 +290,30 @@ An admin route file `routes.xml` is placed in the `etc/adminhtml` directory
     </router>
 </config>
 ```
+
+### Admin Menu Link
+
+A link is defined in menu file `routes.xml` placed in the `etc/adminhtml` directory
+```xml
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="CodingTask::top_level"
+             module="CodingTask_ModuleName"
+             resource="Magento_Backend::content"
+             sortOrder="9999"
+             title="CodingTask"/>
+        <add action="custom/entity/index"
+             id="CodingTask::custom_entity"
+             module="CodingTask_ModuleName"
+             parent="CodingTask::top_level"
+             resource="Magento_Backend::content"
+             sortOrder="9999"
+             title="Custom Entity"/>
+    </menu>
+</config>
+```
+
+## Research and Useful Links Section
+[Creating a Magento admin page: Routing and navigation](http://devdocs.magento.com/guides/v2.2/ext-best-practices/extension-coding/example-module-adminpage.html#routing-and-navigation)
