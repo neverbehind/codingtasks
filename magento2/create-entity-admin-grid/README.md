@@ -27,7 +27,7 @@ Magento 2 Custom Entity Admin Management Grid.
 1. Admin Route to Controller
 
 ### Grid Collection Class
-The Grid Collection Class file `Collection.php` is placed in the `Model/Resource/CustomerEntity/Grid` directory
+The Grid Collection Class file `Collection.php` is placed in the `Model/Resource/CustomEntity/Grid` directory
 ```php
 <?php
 
@@ -100,6 +100,173 @@ The UI Component Datasource Directive is placed in the `di.xml` in the modules `
     </type>
     <!-- Other di.xml content -->
 </config>
+```
+
+The UI Component DataSource `DataProvider.php` is placed in the `Model/CustomEntity` directory
+```php
+<?php
+
+namespace CodingTask\ModuleName\Model\CustomEntity;
+
+use Magento\Ui\DataProvider\AbstractDataProvider;
+use CodingTask\ModuleName\Model\Resource\CustomEntity\Collection;
+use CodingTask\ModuleName\Model\Resource\CustomEntity\CollectionFactory;
+use Magento\Framework\App\Request\DataPersistorInterface;
+
+/**
+ * Class DataProvider
+ * @package CodingTask\ModuleName\Model\CustomEntity
+ */
+class DataProvider extends AbstractDataProvider
+{
+    /**
+     * @var array
+     */
+    private $loadedData;
+
+    /**
+     * @var Collection
+     */
+    protected $collection;
+
+    /**
+     * @var DataPersistorInterface
+     */
+    private $dataPersistor;
+
+    /**
+     * Constructor
+     *
+     * @param string $name
+     * @param string $primaryFieldName
+     * @param string $requestFieldName
+     * @param CollectionFactory $collectionFactory
+     * @param DataPersistorInterface $dataPersistor
+     * @param array $meta
+     * @param array $data
+     */
+    public function __construct(
+        $name,
+        $primaryFieldName,
+        $requestFieldName,
+        CollectionFactory $collectionFactory,
+        DataPersistorInterface $dataPersistor,
+        array $meta = [],
+        array $data = []
+    ) {
+        $this->collection = $collectionFactory->create();
+        $this->dataPersistor = $dataPersistor;
+        parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
+    }
+
+    /**
+     * Get data
+     *
+     * @return array
+     */
+    public function getData()
+    {
+        if (isset($this->loadedData)) {
+            return $this->loadedData;
+        }
+
+        $items = $this->collection->getItems();
+        foreach ($items as $model) {
+            $this->loadedData[$model->getId()] = $model->getData();
+        }
+        $data = $this->dataPersistor->get('codingtask_modulename_custom_entity');
+
+        if (!empty($data)) {
+            $model = $this->collection->getNewEmptyItem();
+            $model->setData($data);
+            $this->loadedData[$model->getId()] = $model->getData();
+            $this->dataPersistor->clear('codingtask_modulename_custom_entity');
+        }
+
+        return $this->loadedData;
+    }
+}
+```
+
+The UI Component Listing Column DataSource `CustomEntityActions.php` is placed in the `UI/Component/Listing/Column` directory
+```php
+<?php
+
+namespace CodingTask\ModuleName\Ui\Component\Listing\Column;
+
+use Magento\Ui\Component\Listing\Columns\Column;
+use Magento\Framework\View\Element\UiComponent\ContextInterface;
+use Magento\Framework\View\Element\UiComponentFactory;
+use Magento\Framework\UrlInterface;
+
+/**
+ * Class CustomEntityActions
+ * @package CodingTask\ModuleName\Ui\Component\Listing\Column
+ */
+class CustomEntityActions extends Column
+{
+    /**
+     * @var UrlInterface
+     */
+    private $urlBuilder;
+
+    /**@+
+     * Urls
+     */
+    const URL_PATH_DETAILS = 'custom/entity/details';
+    const URL_PATH_EDIT = 'custom/entity/edit';
+    const URL_PATH_DELETE = 'custom/entity/delete';
+    /**@-*/
+
+    /**
+     * CustomEntityActions constructor.
+     *
+     * @param ContextInterface $context
+     * @param UiComponentFactory $uiComponentFactory
+     * @param UrlInterface $urlBuilder
+     * @param array $components
+     * @param array $data
+     */
+    public function __construct(
+        ContextInterface $context,
+        UiComponentFactory $uiComponentFactory,
+        UrlInterface $urlBuilder,
+        array $components = [],
+        array $data = []
+    ) {
+        $this->urlBuilder = $urlBuilder;
+        parent::__construct($context, $uiComponentFactory, $components, $data);
+    }
+
+    /**
+     * Prepare Data Source
+     *
+     * @param array $dataSource
+     * @return array
+     */
+    public function prepareDataSource(array $dataSource)
+    {
+        if (isset($dataSource['data']['items'])) {
+            foreach ($dataSource['data']['items'] as & $item) {
+                if (isset($item['entity_id'])) {
+                    $item[$this->getData('name')] = [
+                        'edit' => [
+                            'href' => $this->urlBuilder->getUrl(
+                                static::URL_PATH_EDIT,
+                                [
+                                    'entity_id' => $item['entity_id']
+                                ]
+                            ),
+                            'label' => __('Edit')
+                        ]
+                    ];
+                }
+            }
+        }
+
+        return $dataSource;
+    }
+}
 ```
 
 ### UI Component Definition File
