@@ -71,5 +71,11 @@ class LastOrderCommand extends Command
 
 ```
 
+## Usage / Examples
+
+From the Magento root directory, and as the web server user, you can execute this sample command
+
+`$ bin/magento last_order --store_id [integer]`
+
 ## Research and Useful Links Section
 [Magento Guide: Magento CLI](http://devdocs.magento.com/guides/v2.0/extension-dev-guide/cli-cmds/cli-howto.html)
